@@ -628,6 +628,24 @@
                 cider/cider-nrepl             {:mvn/version "0.25.9"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}}}
 
+  :lib/vanilla
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.9"}
+                criterium/criterium {:mvn/version "0.4.6"}
+                nrepl/nrepl                   {:mvn/version "0.8.3"}
+                cider/cider-nrepl             {:mvn/version "0.25.4"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}
+                com.billpiel/sayid            {:mvn/version "0.1.0"}}}
+
+  :middleware/vanilla
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.9"}
+                criterium/criterium           {:mvn/version "0.4.6"}
+                nrepl/nrepl                   {:mvn/version "0.8.3"}
+                cider/cider-nrepl             {:mvn/version "0.25.4"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}
+                com.billpiel/sayid            {:mvn/version "0.1.0"}}
+   :main-opts  ["-m" "nrepl.cmdline"
+                "--middleware" "[cider.nrepl/cider-middleware,com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor]"]}
+
 
   ;; End of: Middleware
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1043,7 +1061,7 @@
 
 
 
-  } ;; End of alias definitions
+ } ;; End of alias definitions
 
 
  ;; Library Repositories
@@ -1053,7 +1071,7 @@
 
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
              "clojars" {:url "https://repo.clojars.org/"}
-
+             "cognitect-dev-tools" {:url "https://dev-tools.cognitect.com/maven/releases/"}}}
              ;; Clojure snapshots
              ;; "sonatype" {:url "https://oss.sonatype.org/content/repositories/snapshots/"}
 
@@ -1072,4 +1090,4 @@
 
              ;; Example of local Artifactory repository configuration
              ;; {"business-area" {:url "https://artifacts.internal-server.com:443/artifactory/business-area-maven-local"}
-             }}
+             
