@@ -629,22 +629,23 @@
                 refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}}}
 
   :lib/vanilla
-  {:extra-deps {compliment/compliment         {:mvn/version "0.3.9"}
-                criterium/criterium {:mvn/version "0.4.6"}
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.11"}
+                criterium/criterium           {:mvn/version "0.4.6"}
                 nrepl/nrepl                   {:mvn/version "0.8.3"}
-                cider/cider-nrepl             {:mvn/version "0.25.4"}
-                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}
+                cider/cider-nrepl             {:mvn/version "0.25.9"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}
                 com.billpiel/sayid            {:mvn/version "0.1.0"}}}
 
   :middleware/vanilla
-  {:extra-deps {compliment/compliment         {:mvn/version "0.3.9"}
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.11"}
                 criterium/criterium           {:mvn/version "0.4.6"}
                 nrepl/nrepl                   {:mvn/version "0.8.3"}
-                cider/cider-nrepl             {:mvn/version "0.25.4"}
-                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}
+                cider/cider-nrepl             {:mvn/version "0.25.9"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}
+                com.gfredericks/debug-repl    {:local/root "/Users/dw/dev/debug-repl"}
                 com.billpiel/sayid            {:mvn/version "0.1.0"}}
    :main-opts  ["-m" "nrepl.cmdline"
-                "--middleware" "[cider.nrepl/cider-middleware,com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor]"]}
+                "--middleware" "[cider.nrepl/cider-middleware,com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,com.gfredericks.debug-repl/wrap-debug-repl]"]}
 
 
   ;; End of: Middleware
@@ -1061,7 +1062,7 @@
 
 
 
- } ;; End of alias definitions
+  } ;; End of alias definitions
 
 
  ;; Library Repositories
