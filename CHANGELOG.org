@@ -2,6 +2,64 @@
 
 * Unreleased
 
+* 2021-04-11
+  Add aliases for more REPL options, with nREPL server and client.  Separated REPL into REPL terminal UI, REPL with Editor and Remote REPL connection
+
+  New aliases:
+  - :repl/nrepl - Clojure REPL with nREPL server
+  - :repl/cider - Clojure REPL with nREPL server and Cider-nrepl (code completion, pretty print, etc.)
+  - :repl/cider - as above with clj-refactor
+  - :repl/remote - simple terminal UI nREPL client for a remote REPL
+  - :repl/rebel-remote - as above with Rebel Readline UI
+
+
+* 2021-04-06
+  Add ~:project/calve~ and ~:project/unused-vars~ to complement the ~:project/outdated~ alias that uses carve to find unused vars in the code base.
+
+  Library version updates
+
+  | :name                           |                                 :current |                                  :latest |
+  |---------------------------------+------------------------------------------+------------------------------------------|
+  | com.github.liquidz/antq         |                                   0.12.2 |                                   0.12.4 |
+  | com.github.seancorfield/depstar |                                  2.0.206 |                                  2.0.211 |
+  | org.clojure/clojurescript       |                                 1.10.773 |                                 1.10.844 |
+  | seancorfield/clj-new            |                                  1.1.264 |                                  1.1.293 |
+
+  Available diffs:
+  - https://github.com/liquidz/antq/compare/0.12.2...0.12.4
+  - https://github.com/seancorfield/depstar/compare/v2.0.206...v2.0.211
+  - https://github.com/seancorfield/clj-new/compare/v1.1.264...v1.1.293
+
+
+* 2021-03-28
+  Library version updates
+
+  | :name                 |                                 :current |                                  :latest |
+  |-----------------------+------------------------------------------+------------------------------------------|
+  | athos/clj-check       | cd1f25456de5eebda0a69602dd3445905382b3a4 | 518d5a1cbfcd7c952f548e6dbfcb9a4a5faf9062 |
+  | org.clojure/data.json |                                    1.1.0 |                                    2.0.2 |
+  | vlaaad/reveal         |                                  1.3.196 |                                  1.3.199 |
+
+
+
+* 2021-03-20
+  Fixed copy-paste error for :project/uberjar and :project/jar aliases when changing fully qualified name of depstar
+
+  Add ~org.slf4j/slf4j-nop~ library to ~:project/antq~ to [[https://github.com/liquidz/antq/blob/main/doc/avoid-slf4j-warnings.adoc][suppress SLF4J warnings]]
+
+  Remove depstar 1.x versions and only using version 2.x
+
+  Library updates reported by ~:project/outdated~
+
+  | :name                           |                                 :current |                                  :latest |
+  |---------------------------------+------------------------------------------+------------------------------------------|
+  | borkdude/carve                  | c0f68129e37a8bae06225e8cd09075911af0d9a3 | f499f65e36e02484609f01ce891f3c0207b24444 |
+  | com.github.liquidz/antq         |                                   0.12.1 |                                   0.12.2 |
+  | com.github.seancorfield/depstar |                                  2.0.193 |                                  2.0.206 |
+  | org.clojure/data.json           |                                    1.1.0 |                                    2.0.1 |
+  | org.clojure/spec-alpha2         | 6a5889b3c12e645147b9af8661908c1d54f685bd | 9118b766b3fd8451995182264f3b2eb04d7a1167 |
+
+
 * 2021-03-17
   Minor fix for antq
 
