@@ -677,7 +677,7 @@
   {:extra-deps {compliment/compliment         {:mvn/version "0.3.11"}
                 criterium/criterium           {:mvn/version "0.4.6"}
                 nrepl/nrepl                   {:mvn/version "0.8.3"}
-                cider/cider-nrepl             {:mvn/version "0.25.9"}
+                cider/cider-nrepl             {:mvn/version "0.25.11"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}
                 com.billpiel/sayid            {:mvn/version "0.1.0"}}}
 
@@ -685,7 +685,7 @@
   {:extra-deps {compliment/compliment         {:mvn/version "0.3.11"}
                 criterium/criterium           {:mvn/version "0.4.6"}
                 nrepl/nrepl                   {:mvn/version "0.8.3"}
-                cider/cider-nrepl             {:mvn/version "0.25.9"}
+                cider/cider-nrepl             {:mvn/version "0.25.11"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}
                 com.gfredericks/debug-repl    {:local/root "/Users/dw/dev/debug-repl"}
                 com.billpiel/sayid            {:mvn/version "0.1.0"}}
