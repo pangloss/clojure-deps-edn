@@ -714,7 +714,7 @@
                 refactor-nrepl/refactor-nrepl {:mvn/version "3.3.2"}}}
 
   :lib/vanilla
-  {:extra-deps {compliment/compliment         {:mvn/version "0.3.11"}
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.12"}
                 criterium/criterium           {:mvn/version "0.4.6"}
                 nrepl/nrepl                   {:mvn/version "0.9.0"}
                 cider/cider-nrepl             {:mvn/version "0.28.3"}
@@ -722,7 +722,7 @@
                 com.billpiel/sayid            {:mvn/version "0.1.0"}}}
 
   :middleware/vanilla
-  {:extra-deps {compliment/compliment         {:mvn/version "0.3.11"}
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.12"}
                 criterium/criterium           {:mvn/version "0.4.6"}
                 nrepl/nrepl                   {:mvn/version "0.9.0"}
                 cider/cider-nrepl             {:mvn/version "0.28.3"}
