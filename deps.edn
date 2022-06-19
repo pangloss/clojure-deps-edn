@@ -719,7 +719,8 @@
                 nrepl/nrepl                   {:mvn/version "0.9.0"}
                 cider/cider-nrepl             {:mvn/version "0.28.3"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "3.3.2"}
-                com.billpiel/sayid            {:mvn/version "0.1.0"}}}
+                com.gfredericks/debug-repl    {:git/url "https://github.com/pangloss/debug-repl.git"
+                                               :git/sha "4303ecc93227b23c53ef616f04337884c4663f2f"}}}
 
   :middleware/vanilla
   {:extra-deps {compliment/compliment         {:mvn/version "0.3.12"}
@@ -727,10 +728,10 @@
                 nrepl/nrepl                   {:mvn/version "0.9.0"}
                 cider/cider-nrepl             {:mvn/version "0.28.3"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "3.3.2"}
-                com.gfredericks/debug-repl    {:local/root "/Users/dw/dev/debug-repl"}
-                com.billpiel/sayid            {:mvn/version "0.1.0"}}
+                com.gfredericks/debug-repl    {:git/url "https://github.com/pangloss/debug-repl.git"
+                                               :git/sha "4303ecc93227b23c53ef616f04337884c4663f2f"}}
    :main-opts  ["-m" "nrepl.cmdline"
-                "--middleware" "[cider.nrepl/cider-middleware,com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,com.gfredericks.debug-repl/wrap-debug-repl]"]}
+                "--middleware" "[cider.nrepl/cider-middleware,refactor-nrepl.middleware/wrap-refactor,com.gfredericks.debug-repl/wrap-debug-repl]"]}
 
 
   ;; End of: Middleware
@@ -1135,9 +1136,9 @@
   ;; Maven Central and Clojars are the canonical repositories for library dependencies
   ;; JCenter is large and fast mirror often accessible behind corporate firewalls
 
-  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
-              "clojars" {:url "https://repo.clojars.org/"}
-              "cognitect-dev-tools" {:url "https://dev-tools.cognitect.com/maven/releases/"}
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://repo.clojars.org/"}
+             "cognitect-dev-tools" {:url "https://dev-tools.cognitect.com/maven/releases/"}
 
              ;; Clojure snapshots
              ;; "sonatype" {:url "https://oss.sonatype.org/content/repositories/snapshots/"}
@@ -1155,6 +1156,6 @@
              ;; Example of local Artifactory repository configuration
              ;; {"business-area" {:url "https://artifacts.internal-server.com:443/artifactory/business-area-maven-local"}
 
-  #_()} ;; End of Library Repositories
+             #_()}} ;; End of Library Repositories
 
- }
+ 
