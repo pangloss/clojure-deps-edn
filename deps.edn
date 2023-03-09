@@ -99,11 +99,11 @@
 
 
   :lib/vanilla
-  {:extra-deps {compliment/compliment         {:mvn/version "0.3.12"}
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.14"}
                 criterium/criterium           {:mvn/version "0.4.6"}
-                nrepl/nrepl                   {:mvn/version "0.9.0"}
-                cider/cider-nrepl             {:mvn/version "0.28.3"}
-                refactor-nrepl/refactor-nrepl {:mvn/version "3.3.2"}
+                nrepl/nrepl                   {:mvn/version "1.0.0"}
+                cider/cider-nrepl             {:mvn/version "0.30.0"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}
                 com.gfredericks/debug-repl    {:git/url "https://github.com/pangloss/debug-repl.git"
                                                :git/sha "4303ecc93227b23c53ef616f04337884c4663f2f"}}}
 
@@ -128,11 +128,11 @@
 
   ;; Refresh the current namespace in a running REPL
   :lib/tools-ns
-  {:extra-deps {org.clojure/tools.namespace {:mvn/version "1.4.1"}}}
+  {:extra-deps {org.clojure/tools.namespace {:mvn/version "1.4.2"}}}
 
   ;; DEPRECATED
   :lib/reloaded
-  {:extra-deps {org.clojure/tools.namespace  {:mvn/version "1.4.1"}
+  {:extra-deps {org.clojure/tools.namespace  {:mvn/version "1.4.2"}
                 org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha"
                                               :git/sha "e4fb92eef724fa39e29b39cc2b1a850567d490dd"}
                 org.slf4j/slf4j-nop          {:mvn/version "2.0.6"}
@@ -188,9 +188,9 @@
                 "--interactive"]}
 
   :repl/debug-refactor
-  {:extra-deps {nrepl/nrepl                   {:mvn/version "0.9.0"}
-                cider/cider-nrepl             {:mvn/version "0.28.5"}
-                refactor-nrepl/refactor-nrepl {:mvn/version "3.5.3"}
+  {:extra-deps {nrepl/nrepl                   {:mvn/version "1.0.0"}
+                cider/cider-nrepl             {:mvn/version "0.30.0"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}
                 com.billpiel/sayid            {:mvn/version "0.1.0"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--middleware" "[com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
@@ -198,15 +198,15 @@
 
   :repl/inspect
   {:extra-deps
-   {cider/cider-nrepl {:mvn/version "0.28.5"}
-    djblue/portal     {:mvn/version "0.33.0"}}
+   {cider/cider-nrepl {:mvn/version "0.30.0"}
+    djblue/portal     {:mvn/version "0.36.0"}}
    :main-opts ["-m" "nrepl.cmdline"
                "--middleware"
                "[cider.nrepl/cider-middleware,portal.nrepl/wrap-portal]"]}
 
   ;; clojure -M:repl/cljs
   :repl/cljs
-  {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.773"}
+  {:extra-deps {org.clojure/clojurescript {:mvn/version "1.11.60"}
                 nrepl/nrepl               {:mvn/version "1.0.0"}
                 cider/cider-nrepl         {:mvn/version "0.30.0"}
                 cider/piggieback          {:mvn/version "0.5.3"}}
@@ -265,8 +265,8 @@
                 "-f" "rebel-readline.main/-main"]}
 
   :repl/rebel-debug
-  {:extra-deps {nrepl/nrepl                {:mvn/version "0.9.0"}
-                cider/cider-nrepl          {:mvn/version "0.28.5"}
+  {:extra-deps {nrepl/nrepl                {:mvn/version "1.0.0"}
+                cider/cider-nrepl          {:mvn/version "0.30.0"}
                 com.billpiel/sayid         {:mvn/version "0.1.0"}
                 com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
    :main-opts  ["-m" "nrepl.cmdline"
@@ -367,8 +367,8 @@
   ;; clojure -M:search/errors
   :search/errors
   {:extra-deps {athos/clj-check
-                {:git/url "https://github.com/athos/clj-check.git"
-                 :sha     "518d5a1cbfcd7c952f548e6dbfcb9a4a5faf9062"}}
+                {:git/url "https://github.com/athos/clj-check"
+                 :git/sha "518d5a1cbfcd7c952f548e6dbfcb9a4a5faf9062"}}
    :main-opts  ["-m" "clj-check.check"]}
 
   ;; find-deps - fuzzy search Maven & Clojars and add deps to deps.edn
@@ -545,7 +545,7 @@
   :database/h2
   {:extra-deps
    {com.h2database/h2                 {:mvn/version "2.1.214"}
-    com.github.seancorfield/next.jdbc {:mvn/version "1.3.847"}}}
+    com.github.seancorfield/next.jdbc {:mvn/version "1.3.858"}}}
 
   ;; End of Databases and drivers uses only during development
   ;; ---------------------------------------------------
@@ -570,7 +570,7 @@
   ;; https://github.com/djblue/portal
 
   :inspect/portal-cli
-  {:extra-deps {djblue/portal {:mvn/version "0.35.1"}}}
+  {:extra-deps {djblue/portal {:mvn/version "0.36.0"}}}
 
   :inspect/portal-web
   {:extra-deps {djblue/portal             {:mvn/version "0.35.1"}
@@ -591,7 +591,7 @@
   ;; https://github.com/vvvvalvalval/scope-capture
   ;; save and restore the local environment
   :lib/scope-capture
-  {:extra-deps {vvvvalvalval/scope-capture {:mvn/version "0.3.2"}}}
+  {:extra-deps {vvvvalvalval/scope-capture {:mvn/version "0.3.3"}}}
 
   ;; End of Debug Tools
   ;; ---------------------------------------------------
@@ -663,7 +663,7 @@
   ;; clojure -X:test/watch
   :test/watch
   {:extra-paths ["test"]
-   :extra-deps {lambdaisland/kaocha {:mvn/version "1.77.1236"}}
+   :extra-deps {lambdaisland/kaocha {:mvn/version "1.80.1274"}}
    :main-opts   ["-m" "kaocha.runner" "--watch" "--fail-fast" "--skip-meta" ":slow"]
    :exec-fn kaocha.runner/exec-fn
    :exec-args {:watch? true
@@ -672,14 +672,14 @@
 
   :test/cljs
   {:extra-paths ["test"]
-   :extra-deps  {lambdaisland/kaocha      {:mvn/version "1.77.1236"}
+   :extra-deps  {lambdaisland/kaocha      {:mvn/version "1.80.1274"}
                  lambdaisland/kaocha-cljs {:mvn/version "1.4.130"}}
    :main-opts   ["-m" "kaocha.runner" "unit-cljs"]}
 
   ;; https://github.com/lambdaisland/kaocha-cucumbe
   ;; - used for kaocha-runner.el to run Kaocha test runner in Emacs Cider
   :lib/kaocha
-  {:extra-deps {lambdaisland/kaocha {:mvn/version "1.77.1236"}}}
+  {:extra-deps {lambdaisland/kaocha {:mvn/version "1.80.1274"}}}
 
   ;; End of Test runners
   ;; ---------------------------------------------------
