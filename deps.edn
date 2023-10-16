@@ -108,11 +108,11 @@
                                                :git/sha "4303ecc93227b23c53ef616f04337884c4663f2f"}}}
 
   :middleware/vanilla
-  {:extra-deps {compliment/compliment         {:mvn/version "0.3.12"}
+  {:extra-deps {compliment/compliment         {:mvn/version "0.3.14"}
                 criterium/criterium           {:mvn/version "0.4.6"}
-                nrepl/nrepl                   {:mvn/version "0.9.0"}
-                cider/cider-nrepl             {:mvn/version "0.28.3"}
-                refactor-nrepl/refactor-nrepl {:mvn/version "3.3.2"}
+                nrepl/nrepl                   {:mvn/version "1.0.0"}
+                cider/cider-nrepl             {:mvn/version "0.30.0"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}
                 com.gfredericks/debug-repl    {:git/url "https://github.com/pangloss/debug-repl.git"
                                                :git/sha "4303ecc93227b23c53ef616f04337884c4663f2f"}}
    :main-opts  ["-m" "nrepl.cmdline"
